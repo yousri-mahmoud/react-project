@@ -8,7 +8,10 @@ function App() {
     <div className="App">
       <h2>COUNTER</h2>
       <div className="flex">
-        <button className="dec" onClick={() => setCounter(counter - 1)}>
+        <button
+          className={`dec ${counter ? "" : "disabel"}`}
+          onClick={() => setCounter(counter - 1)}
+        >
           {" "}
           dec
         </button>

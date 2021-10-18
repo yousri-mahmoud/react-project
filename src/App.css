@@ -27,3 +27,6 @@ button {
   margin: 0 30px;
   cursor: pointer;
 }
+.disabel {
+  pointer-events: none;
+}
