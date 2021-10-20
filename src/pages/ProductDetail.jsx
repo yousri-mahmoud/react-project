@@ -2,6 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router";
 import Loading from "../shared/Loading";
+import "./detail.css";
 function ProductDetail({ match }) {
   const [product, setProduct] = useState("");
   const [loading, setLoading] = useState(false);
@@ -26,12 +27,12 @@ function ProductDetail({ match }) {
   }
   return (
     <section>
-      <div className="card h-100">
-        <img src={product.image} className="card-img-top" alt="..." />
-        <div className="card-body">
+      <div className="d-flex justify-content-around align-items-center my-5 border">
+        <img src={product.image} className="item" alt="..." />
+        <div className="">
           <h5 className="card-title">{product.title}</h5>
           <h4 className="card-text text-danger">{product.category}</h4>
-          <p>{product.price}</p>
+          <p>{product.price} EGP</p>
         </div>
       </div>
     </section>
