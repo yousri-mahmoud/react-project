@@ -7,6 +7,7 @@ import Footer from "./shared/Footer";
 import ProductsList from "./pages/ProductsList";
 import Home from "./pages/Home";
 import ProductDetail from "./pages/ProductDetail";
+import Todo from "./pages/todo/Todo";
 
 function App() {
   return (
@@ -25,6 +26,9 @@ function App() {
           </Route>
           <Route path="/product/:id">
             <ProductDetail />
+          </Route>
+          <Route path="/todo">
+            <Todo />
           </Route>
         </Switch>
       </div>
