@@ -40,6 +40,16 @@ function Navbar() {
                 todo
               </Link>
             </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/loggin">
+                loggin
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/register">
+                register
+              </Link>
+            </li>
           </ul>
         </div>
       </div>

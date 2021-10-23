@@ -8,6 +8,8 @@ import ProductsList from "./pages/ProductsList";
 import Home from "./pages/Home";
 import ProductDetail from "./pages/ProductDetail";
 import Todo from "./pages/todo/Todo";
+import Loggin from "./pages/regisration/loggin/Loggin";
+import Registration from "./pages/regisration/Register/Registration";
 
 function App() {
   return (
@@ -29,6 +31,12 @@ function App() {
           </Route>
           <Route path="/todo">
             <Todo />
+          </Route>
+          <Route path="/loggin">
+            <Loggin />
+          </Route>
+          <Route path="/register">
+            <Registration />
           </Route>
         </Switch>
       </div>

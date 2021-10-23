@@ -1,4 +1,12 @@
-const TodoList = ({ todos, deleteTodo }) => {
+import { useSelector } from "react-redux";
+import { REMOVE_TODO } from "../../Redux/actions";
+import { useDispatch } from "react-redux";
+const TodoList = () => {
+  const todos = useSelector((state) => state.todo.todos);
+  const dispatch = useDispatch();
+  const deleteTodo = (index) => {
+    dispatch({ type: REMOVE_TODO, payload: index });
+  };
   const todosList =
     todos && todos.length > 0 ? (
       todos.map((todo, i) => {

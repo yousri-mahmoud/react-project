@@ -1,6 +1,7 @@
 import { useState } from "react";
-
-const TodoForm = ({ addTodo }) => {
+import { useDispatch } from "react-redux";
+import { ADD_TODO } from "../../Redux/actions";
+const TodoForm = () => {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
 
@@ -9,6 +10,10 @@ const TodoForm = ({ addTodo }) => {
     addTodo({ title, content });
     setTitle("");
     setContent("");
+  };
+  const dispatch = useDispatch();
+  const addTodo = (task) => {
+    dispatch({ type: ADD_TODO, payload: task });
   };
 
   return (
